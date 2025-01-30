@@ -116,7 +116,7 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-
+    
     <Style TargetType="Border" x:Key="OutlineBorderMainPanels">
         <Setter Property="Tag" Value="{DynamicResource DetailsViewEnablePanelsDropShadowEffect}" />
         <Setter Property="Background" Value="Transparent" />
@@ -169,7 +169,7 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-
+    
     <Style TargetType="Border" x:Key="SectionContainerMain">
         <Setter Property="Background" Value="{DynamicResource SectionContainerMainBackgroundBrush}" />
         <Setter Property="BorderBrush" Value="#1A000025" />
@@ -207,7 +207,7 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-
+    
     <DataTemplate x:Key="HltbDataGridTemplate">
         <DataTemplate.Resources>
             <Style TargetType="Label" x:Key="HltbGridLabelStyle">
