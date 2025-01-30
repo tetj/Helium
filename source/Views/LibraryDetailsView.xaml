@@ -116,7 +116,7 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-    
+
     <Style TargetType="Border" x:Key="OutlineBorderMainPanels">
         <Setter Property="Tag" Value="{DynamicResource DetailsViewEnablePanelsDropShadowEffect}" />
         <Setter Property="Background" Value="Transparent" />
@@ -169,7 +169,7 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-    
+
     <Style TargetType="Border" x:Key="SectionContainerMain">
         <Setter Property="Background" Value="{DynamicResource SectionContainerMainBackgroundBrush}" />
         <Setter Property="BorderBrush" Value="#1A000025" />
@@ -207,7 +207,7 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-    
+
     <DataTemplate x:Key="HltbDataGridTemplate">
         <DataTemplate.Resources>
             <Style TargetType="Label" x:Key="HltbGridLabelStyle">
@@ -241,33 +241,6 @@
                 Style="{DynamicResource HltbGridTextStyle}"
                 Text="{PluginSettings Plugin=HowLongToBeat, Path=MainExtraFormat, FallbackValue='--'}"/>
 
-            <Label Content="{DynamicResource LOCHowLongToBeatCompletionist}"
-                    Style="{DynamicResource HltbGridLabelStyle}"
-                    Visibility="{Binding ElementName=CompletionistFormat, Path=Visibility}" />
-            <TextBlock Name="CompletionistFormat"
-                        Style="{DynamicResource HltbGridTextStyle}"
-                        Text="{PluginSettings Plugin=HowLongToBeat, Path=CompletionistFormat, FallbackValue='--'}"/>
-
-            <Label Content="{DynamicResource LOCHowLongToBeatSolo}"
-                    Style="{DynamicResource HltbGridLabelStyle}"
-                    Visibility="{Binding ElementName=SoloFormat, Path=Visibility}" />
-            <TextBlock Name="SoloFormat"
-                        Style="{DynamicResource HltbGridTextStyle}"
-                        Text="{PluginSettings Plugin=HowLongToBeat, Path=SoloFormat, FallbackValue='--'}"/>
-
-            <Label Content="{DynamicResource LOCHowLongToBeatCoOp}"
-                    Style="{DynamicResource HltbGridLabelStyle}"
-                    Visibility="{Binding ElementName=CoOpFormat, Path=Visibility}" />
-            <TextBlock Name="CoOpFormat"
-                Style="{DynamicResource HltbGridTextStyle}"
-                Text="{PluginSettings Plugin=HowLongToBeat, Path=CoOpFormat, FallbackValue='--'}"/>
-
-            <Label Content="{DynamicResource LOCHowLongToBeatVs}"
-                    Style="{DynamicResource HltbGridLabelStyle}"
-                    Visibility="{Binding ElementName=VsFormat, Path=Visibility}" />
-            <TextBlock Name="VsFormat"                     
-                Style="{DynamicResource HltbGridTextStyle}"
-                Text="{PluginSettings Plugin=HowLongToBeat, Path=VsFormat, FallbackValue='--'}"/>
         </GridEx>
     </DataTemplate>
 </ResourceDictionary>
