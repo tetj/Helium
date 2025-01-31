@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Theme</RootNamespace>
     <AssemblyName>Theme</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,9 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Playnite">
       <HintPath>..\..\..\Playnite.dll</HintPath>
@@ -52,17 +56,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\HtmlRenderer.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="PhotoSauce.MagicScaler">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\PhotoSauce.MagicScaler.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Interactivity">
-      <HintPath>..\..\..\System.Windows.Interactivity.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -79,6 +76,8 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="theme.yaml" />
     <None Include="themeExtras.yaml" />
     <None Include="thememodifier.yaml" />
