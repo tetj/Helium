@@ -1,4 +1,4 @@
-# Helium (Fork)
+# HeliumWithTabs
 This is a fork of [Helium](https://github.com/darklinkpower/Helium), which is a theme inspired by Steam, for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mode.
 
 The differences are specific to the Details view:
