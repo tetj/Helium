@@ -1031,7 +1031,8 @@
                                                     </Grid>
                                                 </StackPanel>
 
-
+                                                <!-- duplicate video player ? -->
+                                                <!--Rectangle used to expand the panel while the video loads
                                                 <StackPanel Name="VideoFeed" Margin="0,0,0,15">
                                                     <StackPanel.Style>
                                                         <Style TargetType="StackPanel">
@@ -1053,7 +1054,7 @@
                                                     <Grid Background="{DynamicResource SectionContainerMainBackgroundBrush}" MinHeight="45" Margin="0,0,0,10" >
                                                         <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
                                                         <Border Style="{DynamicResource OutlineBorderMainPanels}" />
-                                                        <!--Rectangle used to expand the panel while the video loads-->
+                                                        
                                                         <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
                                                             <Rectangle Width="16" Height="9" Fill="Transparent" IsHitTestVisible="False" />
                                                         </Viewbox>
@@ -1062,7 +1063,7 @@
                                                         </StackPanel>
                                                     </Grid>
                                                 </StackPanel>
-
+                                                -->
 
                                             </StackPanel>
 
@@ -1248,14 +1249,14 @@
 
                                         <StackPanel Name="WebExplorerPanel" Margin="0,0,0,15"
                                                             Visibility="{Binding ElementName=WebExplorer_BrowserHostViewControl, Path=Content.IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, TargetNullValue=Collapsed, FallbackValue=Collapsed}">
-                                            <Label Content="{DynamicResource LOCWebExplorer_WebLabel}" Style="{DynamicResource FeedSectionLabel}" />
-                                            <Grid Background="{DynamicResource SectionContainerMainBackgroundBrush}" MinHeight="45" Margin="0,0,0,10"
+                                            
+                                            <Grid Background="{DynamicResource SectionContainerMainBackgroundBrush}" MinHeight="45" Margin="0,0,0,0"
                                                           SnapsToDevicePixels="True" UseLayoutRounding="True">
                                                 <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
                                                 <Border Style="{DynamicResource OutlineBorderMainPanels}" />
                                                 <ContentControl x:Name="WebExplorer_BrowserHostViewControl"
                                                                         Height="{DynamicResource WebExplorerControlHeight}"
-                                                                        Margin="0,10,0,0" />
+                                                                        Margin="0,0,0,0" />
                                             </Grid>
                                         </StackPanel>
                                     </TabItem>
@@ -1267,7 +1268,6 @@
 
                                         <StackPanel Name="VNDBPanel" Style="{DynamicResource PluginStackpanelVisibility}"
                                                             Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                            <Label Content="{DynamicResource LOCSuccessStoryAchievements}" Style="{DynamicResource FeedSectionLabel}"/>
                                             <Grid>
                                                 <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
                                                 <Border Style="{DynamicResource OutlineBorderSidePanels}" />
@@ -1299,8 +1299,7 @@
                                                     </Style.Triggers>
                                                 </Style>
                                             </StackPanel.Style>
-
-                                            <Label Content="{DynamicResource LOCNotesLabel}" Style="{DynamicResource FeedSectionLabel}"/>
+                                            
                                             <Grid Margin="0,0,0,10" MinHeight="45">
                                                 <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
                                                 <Border Style="{DynamicResource OutlineBorder}" />
