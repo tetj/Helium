@@ -4,7 +4,7 @@ This theme is for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mod
 
 ## Installation
 
-1. Download the latest release from the [releases page](ok)
+1. Download the latest release from the [releases](https://github.com/tetj/HeliumWithTabs/releases/)
 2. Open the .pthm file
 
 ## Usage & features
