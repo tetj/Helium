@@ -457,28 +457,6 @@
                                                                         ContentTemplate="{StaticResource FiveStarScoreTemplate}"/>
                                                     </StackPanel>
 
-                                                    <Label Name="PART_ElemFeatures" >
-                                                        <StackPanel Orientation="Horizontal">
-                                                            <TextBlock Text="&#xEF74;" Style="{DynamicResource Icon}" />
-                                                            <TextBlock Text="{DynamicResource LOCFeaturesLabel}" />
-                                                        </StackPanel>
-                                                    </Label>
-                                                    <ItemsControl Name="PART_ItemsFeatures" />
-
-                                                    <Label Name="PART_ElemTags" >
-                                                        <StackPanel Orientation="Horizontal">
-                                                            <TextBlock Text="&#xEC85;" Style="{DynamicResource Icon}" />
-                                                            <TextBlock Text="{DynamicResource LOCTagsLabel}" />
-                                                        </StackPanel>
-                                                    </Label>
-                                                    <ItemsControl Name="PART_ItemsTags" />
-
-                                                    <Label Name="PART_ElemLinks" >
-                                                        <StackPanel Orientation="Horizontal">
-                                                            <TextBlock Text="&#xEF71;" Style="{DynamicResource Icon}" />
-                                                            <TextBlock Text="{DynamicResource LOCLinksLabel}" />
-                                                        </StackPanel>
-                                                    </Label>
                                                     
                                                     <ItemsControl ItemsSource="{Binding Game.Links}"
                                                                   Visibility="{Binding ElementName=PART_ElemLinks, Path=Visibility}">
