@@ -1,6 +1,12 @@
-# HeliumWithTabs
-This is a fork of [Helium](https://github.com/darklinkpower/Helium), which is a theme inspired by Steam, for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mode.
+# Helium With Tabs
+This is a fork of [Helium](https://github.com/darklinkpower/Helium), it's a theme inspired by Steam and Plex.
+This theme is for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mode.
 
-The differences are specific to the Details view:
-* ...
-* ...
+## Installation
+
+1. Download the latest release from the [releases page](ok)
+2. Open the .pthm file
+
+## Usage & features
+Download instructions here : [Playnite.docx](https://github.com/tetj/BonusTools/documentation/Playnite.docx?raw=1) 
+
