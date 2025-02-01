@@ -107,7 +107,7 @@
                                                     <Grid Name="HeaderImagesGrid" Height="{Settings CalculatedGameDetailsIndentation}" MinHeight="310">
 
                                                         <!-- VIDEO PLAYER -->
-                                                        <StackPanel>
+                                                        <StackPanel Margin="-10,-10,0,0">
                                                             <Border Panel.ZIndex="99">
                                                                 <Border.Style>
                                                                     <Style TargetType="Border">
@@ -486,6 +486,7 @@
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="Auto" />
                                                     <RowDefinition Height="Auto" />
+                                                    
                                                 </Grid.RowDefinitions>
                                                 <Grid Grid.Row="0">
                                                     <Border Background="{DynamicResource GameInfoContainerBackgroundBrush}"
@@ -728,7 +729,6 @@
                                                     </ItemsControl>
                                                 </Grid>
 
-
                                             </Grid>
 
                                         </Grid>
@@ -740,13 +740,12 @@
                                         <TabItem.Header>
                                             <TextBlock Text="HLTB" FontSize="{DynamicResource FontSizeLarger}" />
                                         </TabItem.Header>
-
-                                        <Grid Grid.Row="2" Margin="20,10,30,10" Background="{DynamicResource SectionContainerMainBackgroundBrush}" MinHeight="45">
+                                        <Grid Margin="20,10,30,10" Background="{DynamicResource SectionContainerMainBackgroundBrush}" MinHeight="45">
 
 
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="1100" />
+                                                <ColumnDefinition Width="Auto" />
                                             </Grid.ColumnDefinitions>
 
 
@@ -857,6 +856,7 @@
                                                     <ContentControl x:Name="GameRelations_SamePublisherControl" Margin="0,10,0,0" />
                                                 </Expander>
                                             </StackPanel>
+
 
                                         </Grid>
 
@@ -1179,8 +1179,8 @@
 
                                         <StackPanel>
 
-                                            <StackPanel Name="SuccessStoryPanel" Style="{DynamicResource PluginStackpanelVisibility}">
-
+                                            <StackPanel Name="SuccessStoryPanel" Style="{DynamicResource PluginStackpanelVisibility}"
+                                                            Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                 <Label Content="{DynamicResource LOCSuccessStoryAchievements}" Style="{DynamicResource FeedSectionLabel}"/>
                                                 <Grid>
                                                     <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
@@ -1215,20 +1215,6 @@
                                                     <Border Padding="10" >
                                                         <StackPanel>
                                                             <ContentControl x:Name="SteamScreenshots_SteamScreenshotsViewControl" />
-                                                        </StackPanel>
-                                                    </Border>
-                                                </Grid>
-                                            </StackPanel>
-
-                                            <StackPanel Name="VNDBPanel" Style="{DynamicResource PluginStackpanelVisibility}"
-                                                            Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                <Label Content="{DynamicResource LOCSuccessStoryAchievements}" Style="{DynamicResource FeedSectionLabel}"/>
-                                                <Grid>
-                                                    <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
-                                                    <Border Style="{DynamicResource OutlineBorderSidePanels}" />
-                                                    <Border Padding="10" >
-                                                        <StackPanel>
-                                                            <ContentControl x:Name="VNDBNexus_VndbVisualNovelViewControl" />
                                                         </StackPanel>
                                                     </Border>
                                                 </Grid>
@@ -1270,6 +1256,26 @@
                                                 <ContentControl x:Name="WebExplorer_BrowserHostViewControl"
                                                                         Height="{DynamicResource WebExplorerControlHeight}"
                                                                         Margin="0,10,0,0" />
+                                            </Grid>
+                                        </StackPanel>
+                                    </TabItem>
+
+                                    <TabItem Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <TabItem.Header>
+                                            <TextBlock Text="VNDB" FontSize="{DynamicResource FontSizeLarger}" />
+                                        </TabItem.Header>
+
+                                        <StackPanel Name="VNDBPanel" Style="{DynamicResource PluginStackpanelVisibility}"
+                                                            Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                            <Label Content="{DynamicResource LOCSuccessStoryAchievements}" Style="{DynamicResource FeedSectionLabel}"/>
+                                            <Grid>
+                                                <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
+                                                <Border Style="{DynamicResource OutlineBorderSidePanels}" />
+                                                <Border Padding="10" >
+                                                    <StackPanel>
+                                                        <ContentControl x:Name="VNDBNexus_VndbVisualNovelViewControl" />
+                                                    </StackPanel>
+                                                </Border>
                                             </Grid>
                                         </StackPanel>
                                     </TabItem>
