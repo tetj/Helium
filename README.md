@@ -8,5 +8,5 @@ This theme is for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mod
 2. Open the .pthm file
 
 ## Usage & features
-Download instructions here : [Playnite.docx](https://github.com/tetj/BonusTools/documentation/Playnite.docx?raw=1) 
+Download instructions here : [Playnite.docx]([https://github.com/tetj/BonusTools/documentation/Playnite.docx?raw=1](https://github.com/tetj/BonusTools/raw/refs/heads/master/documentation/Playnite.docx)) 
 
