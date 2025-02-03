@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-AddonId: HeliumWithTabs-8b15c46a-90c2-4fe5-9ebb-1ab25ba7fcb2
-Packages:
-  - Version: 3
-    RequiredApiVersion: 2.0.0
-    ReleaseDate: 2025-02-01
-    PackageUrl: https://github.com/tetj/HeliumWithTabs/releases/download/v3/HeliumWithTabs-8b15c46a-90c2-4fe5-9ebb-1ab25ba7fcb2_1_66.pthm
-    Changelog:
-      - Initial release
-
-=======
 AddonId: 'HeliumWithTabs-8b15c46a-90c2-4fe5-9ebb-1ab25ba7fcb2'
 Packages:
   - Version: 2.0
@@ -17,4 +6,3 @@ Packages:
     PackageUrl: https://github.com/tetj/HeliumWithTabs/releases/download/v3/HeliumWithTabs-8b15c46a-90c2-4fe5-9ebb-1ab25ba7fcb2_1_66.pthm
     Changelog:
       - First release
->>>>>>> Stashed changes
