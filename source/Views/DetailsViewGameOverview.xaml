@@ -58,7 +58,7 @@
                                                             </Style>
                                                         </Grid.Style>
                                                     </Grid>
-                                                    <!--Border>
+                                                    <Border>
                                                         <Border.Style>
                                                             <Style TargetType="{x:Type Border}">
                                                                 <Setter Property="Visibility" Value="Visible" />
@@ -83,7 +83,7 @@
                                                                 </LinearGradientBrush>
                                                             </FadeImage.OpacityMask>
                                                         </FadeImage>
-                                                    </Border-->
+                                                    </Border>
 
                                                     <!-- BackgroundChanger plugin background -->
                                                     <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
@@ -193,29 +193,15 @@
                                                             Visibility="{PluginSettings Plugin=SystemChecker, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                                             <ContentControl x:Name="CheckLocalizations_PluginButton" Height="40" VerticalAlignment="Bottom" Margin="0,0,10,0" DockPanel.Dock="Left" 
                                                             Visibility="{PluginSettings Plugin=CheckLocalizations, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                            <ContentControl x:Name="CheckDlc_PluginButton" Height="40" VerticalAlignment="Bottom" Margin="0,0,10,0" DockPanel.Dock="Left" 
-                                                            Visibility="{PluginSettings Plugin=CheckDlc, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" 
-                                                                />
+
                                                         </StackPanel>
 
                                                         <!-- PLAYERS INGAME -->
                                                         <StackPanel Margin="120,0,0,7" VerticalAlignment="Bottom">
-
-
-                                                            <Border Margin="0,10,0,0"
-                                                    Background="{DynamicResource DetailsViewBannerPanelBackgroundBrush}"
-                                                    BorderBrush="{DynamicResource DetailsViewBannerPanelBorderBrush}"
-                                                    BorderThickness="1"
-                                                    Visibility="{PluginSettings Plugin=GogSecondClassWatcher, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                                <ContentControl x:Name="GogSecondClassWatcher_SecondClassWatcherControl" />
-                                                            </Border>
-
-
                                                             <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl" VerticalAlignment="Bottom">
                                                                 <ContentControl.Resources>
                                                                     <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
                                                                 </ContentControl.Resources>
-                                                                <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
                                                             </ContentControl>
                                                         </StackPanel>
 
@@ -290,9 +276,9 @@
                                                                                        Style="{DynamicResource TextBlockGameScore}" /> -->
 
                                                                         <TextBlock Name="PART_TextUserScore2" VerticalAlignment="Center"
-                                                                                       Style="{DynamicResource TextBlockGameScore}" >
+                                                                                       Style="{DynamicResource TextBlockGameScore}">
                                                                             <TextBlock.Text>
-                                                                                <Binding Path="Game.UserScore"  StringFormat="{}{0:N0}">
+                                                                                <Binding Path="Game.UserScore" StringFormat="{}{0:N0}">
                                                                                     <Binding.ConverterCulture>fr-FR</Binding.ConverterCulture>
                                                                                 </Binding>
                                                                             </TextBlock.Text>
@@ -845,15 +831,6 @@
 
                                     </TabItem>
 
-                                    <!-- Links 
-                                    <TabItem>
-                                        <TabItem.Header>
-                                            <TextBlock Text="Links" FontSize="{DynamicResource FontSizeLarger}" />
-                                        </TabItem.Header>
-
-                                    </TabItem>
-                                    -->
-                                        
                                     <!-- Features/Tags -->
                                     <TabItem>
                                         <TabItem.Header>
@@ -921,29 +898,6 @@
                                         </StackPanel>
                                     </TabItem>
 
-                                    <TabItem Visibility="{PluginSettings Plugin=CheckDlc, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                        <TabItem.Header>
-                                            <TextBlock Text="DLCs" FontSize="{DynamicResource FontSizeLarger}" />
-                                        </TabItem.Header>
-                                        <StackPanel Name="CheckDlcPanel" Margin="0,0,0,15"
-                                                            Visibility="{PluginSettings Plugin=CheckDlc, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                            <StackPanel.Resources>
-                                                <Style TargetType="ListBox">
-                                                    <Setter Property="Background" Value="Transparent" />
-                                                    <Setter Property="BorderThickness" Value="0" />
-                                                </Style>
-                                            </StackPanel.Resources>
-                                            <Grid Background="{DynamicResource SectionContainerMainBackgroundBrush}" MinHeight="45" Margin="0,0,20,10"  >
-                                                <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
-                                                <Border Style="{DynamicResource OutlineBorderMainPanels}" />
-                                                <StackPanel Orientation="Vertical" Margin="10">
-                                                    <ContentControl x:Name="CheckDlc_PluginListDlcAll" Height="1000" Margin="0,0,0,10"/>
-                                                    <ContentControl x:Name="CheckDlc_PluginListDlcOwned" Height="1000" Margin="0,0,0,10"/>
-                                                    <ContentControl x:Name="CheckDlc_PluginListDlcNotOwned" Height="1000" Margin="0,0,0,10"/>
-                                                </StackPanel>
-                                            </Grid>
-                                        </StackPanel>
-                                    </TabItem>
 
                                     <TabItem Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                         <TabItem.Header>
@@ -955,7 +909,7 @@
                                             <Grid Background="{DynamicResource SectionContainerMainBackgroundBrush}" MinHeight="45" Margin="0,0,0,10" >
                                                 <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
                                                 <Border Style="{DynamicResource OutlineBorderMainPanels}" />
-                                                <StackPanel Orientation="Vertical" Margin="10" >
+                                                <StackPanel Orientation="Vertical" Margin="10" Height="1200">
                                                     <ContentControl x:Name="NewsViewer_NewsViewerControl" />
                                                 </StackPanel>
                                             </Grid>
@@ -975,8 +929,7 @@
                                                 <StackPanel Orientation="Vertical" Margin="10">
                                                     <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,0,0,10" />
                                                     <ContentControl x:Name="GameActivity_PluginChartLog"  Margin="0,0,0,10"/>
-                                                    <ContentControl x:Name="GameActivity_PluginButton" HorizontalAlignment="Right"
-                                                                            Visibility="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                    <ContentControl x:Name="GameActivity_PluginButton" HorizontalAlignment="Right" />
                                                 </StackPanel>
                                             </Grid>
                                         </StackPanel>
@@ -1000,33 +953,24 @@
                                         </StackPanel>
                                     </TabItem>
 
+                                    <TabItem Visibility="{PluginSettings Plugin=CheckDlc, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <TabItem.Header>
+                                            <TextBlock Text="DLCs" FontSize="{DynamicResource FontSizeLarger}" />
+                                        </TabItem.Header>
+                                        <StackPanel Orientation="Vertical">
+                                            <Label Content="DLCs :" Style="{DynamicResource FeedSectionLabel}"/>
+                                            <ContentControl x:Name="CheckDlc_PluginButton" HorizontalAlignment="Left" MinHeight="20" MinWidth="20" Margin="10,0,0,0" />
+                                        </StackPanel>
+                                    </TabItem>
+
+
                                     <TabItem Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                         <TabItem.Header>
                                             <TextBlock Text="Achievements" FontSize="{DynamicResource FontSizeLarger}" />
                                         </TabItem.Header>
-
                                         <StackPanel>
-                                            <Label Content="Please click on icon below to see achievements :" Style="{DynamicResource FeedSectionLabel}"/>
-
-                                            <StackPanel Name="SuccessStoryPanel" Style="{DynamicResource PluginStackpanelVisibility}"
-                                                            Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-
-                                                <ContentControl x:Name="SuccessStory_PluginButton" HorizontalAlignment="Left" MinHeight="20" MinWidth="20" Margin="10,0,0,0"
-                                                                                Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                <Grid>
-                                                    <!--<Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
-                                                    <Border Style="{DynamicResource OutlineBorderSidePanels}" />-->
-                                                    <Border Padding="10" >
-                                                        <StackPanel>
-                                                            <!--<ContentControl x:Name="SuccessStory_PluginProgressBar"  Height="20" Margin="0,0,0,10"/>
-                                                            <ContentControl x:Name="SuccessStory_PluginCompactUnlocked" />
-                                                            <ContentControl x:Name="SuccessStory_PluginCompactLocked" Margin="0,0,0,10"/>-->
-
-                                                        </StackPanel>
-                                                    </Border>
-                                                </Grid>
-                                            </StackPanel>
-
+                                            <Label Content="Achievements :" Style="{DynamicResource FeedSectionLabel}"/>
+                                            <ContentControl x:Name="SuccessStory_PluginButton" HorizontalAlignment="Left" MinHeight="20" MinWidth="20" Margin="10,0,0,0" />
                                         </StackPanel>
                                     </TabItem>
 
@@ -1084,8 +1028,8 @@
                                                 <Border Style="{DynamicResource OutlineBorderSidePanelsBorder}" />
                                                 <Border Style="{DynamicResource OutlineBorderMainPanels}" />
                                                 <ContentControl x:Name="WebExplorer_BrowserHostViewControl"
-                                                                        Height="{DynamicResource WebExplorerControlHeight}"
-                                                                        Margin="0,0,0,0" />
+                                                                        Height="1400"
+                                                                        Margin="0,0,10,0" />
                                             </Grid>
                                         </StackPanel>
                                     </TabItem>
@@ -1109,9 +1053,9 @@
                                         </StackPanel>
                                     </TabItem>
 
-                                    <TabItem Visibility="{Binding ElementName=NotesVisibilityProxy, Path=Tag}">
+                                    <TabItem Visibility="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}">
                                         <TabItem.Header>
-                                            <TextBlock Text="Notes" FontSize="{DynamicResource FontSizeLarger}" />
+                                            <TextBlock Text="{DynamicResource LOCNotesLabel}" FontSize="{DynamicResource FontSizeLarger}" />
                                         </TabItem.Header>
 
                                         <StackPanel Margin="0,0,0,10">
