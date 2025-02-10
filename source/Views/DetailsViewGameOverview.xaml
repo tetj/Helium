@@ -269,45 +269,49 @@
 
 
                                                                 <StackPanel Margin="15,0,20,5" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                                                    <Label Name="PART_ElemUserScore" Content="Number of reviews" />
+                                                                    <Label Content="Number of reviews" />
                                                                     <StackPanel Orientation="Horizontal"
-                                                                                    Visibility="{Binding ElementName=PART_TextUserScore, Path=Visibility}">
-                                                                        <!-- <TextBlock Name="PART_TextUserScore" VerticalAlignment="Center"
-                                                                                       Style="{DynamicResource TextBlockGameScore}" /> -->
-
-                                                                        <TextBlock Name="PART_TextUserScore2" VerticalAlignment="Center"
+                                                                                    Visibility="{Binding ElementName=PART_PlayCount2, Path=Visibility}">
+                                                                        <TextBlock Name="PART_PlayCount2" VerticalAlignment="Center"
                                                                                        Style="{DynamicResource TextBlockGameScore}">
                                                                             <TextBlock.Text>
-                                                                                <Binding Path="Game.UserScore" StringFormat="{}{0:N0}">
+                                                                                <Binding Path="Game.PlayCount" StringFormat="{}{0:N0}">
                                                                                     <Binding.ConverterCulture>fr-FR</Binding.ConverterCulture>
                                                                                 </Binding>
                                                                             </TextBlock.Text>
                                                                         </TextBlock>
-
-
-                                                                        <!--         <ContentControl Content="{Binding Game.UserScore}"
+                                                                    </StackPanel>
+                                                                </StackPanel>
+                                                                <StackPanel Margin="15,0,20,5" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                                                    <Label Name="PART_ElemUserScore" Content="SensCritique"  />
+                                                                    <StackPanel Orientation="Horizontal"
+                                                                                    Visibility="{Binding ElementName=PART_TextUserScore2, Path=Visibility, TargetNullValue=0}">
+                                                                        <TextBlock Name="PART_TextUserScore2" VerticalAlignment="Center" Text="{Binding Path=Game.UserScore}"
+                                                                                       Style="{DynamicResource TextBlockGameScore}" Tag="{Binding Path=Game.UserScoreGroup}" />
+                                                                        <ContentControl Content="{Binding Game.UserScore}"
                                                                                             Padding="6,0,0,4"
                                                                                             HorizontalAlignment="Left"
                                                                                             VerticalAlignment="Center"
                                                                                             Background="Transparent"
-                                                                                            Foreground="{Binding ElementName=PART_TextUserScore, Path=Foreground}"
-                                                                                            Height="{Binding ElementName=PART_TextUserScore, Path=ActualHeight}"
-                                                                                            ContentTemplate="{StaticResource FiveStarScoreTemplate}"/> -->
+                                                                                            Foreground="{Binding ElementName=PART_TextUserScore2, Path=Foreground}"
+                                                                                            Height="{Binding ElementName=PART_TextUserScore2, Path=ActualHeight}"
+                                                                                            ContentTemplate="{StaticResource FiveStarScoreTemplate}"/>
+
                                                                     </StackPanel>
-                                                                </StackPanel>
+                                                                </StackPanel>                                                              
                                                                 <StackPanel Margin="15,0,20,5" HorizontalAlignment="Left" VerticalAlignment="Bottom">
                                                                     <Label Name="PART_ElemCommunityScore" Content="{DynamicResource LOCCommunityScore}" />
                                                                     <StackPanel Orientation="Horizontal"
-                                                                                    Visibility="{Binding ElementName=PART_TextCommunityScore, Path=Visibility}">
-                                                                        <TextBlock Name="PART_TextCommunityScore" VerticalAlignment="Center"
-                                                                                       Style="{DynamicResource TextBlockGameScore}" />
+                                                                                    Visibility="{Binding ElementName=PART_TextCommunityScore2, Path=Visibility}">
+                                                                        <TextBlock Name="PART_TextCommunityScore2" VerticalAlignment="Center" Text="{Binding Path=Game.CommunityScore}"
+                                                                                       Style="{DynamicResource TextBlockGameScore}" Tag="{Binding Path=Game.CommunityScoreGroup}" />
                                                                         <ContentControl Content="{Binding Game.CommunityScore}"
                                                                                             Padding="6,0,0,4"
                                                                                             HorizontalAlignment="Left"
                                                                                             VerticalAlignment="Center"
                                                                                             Background="Transparent"
-                                                                                            Foreground="{Binding ElementName=PART_TextCommunityScore, Path=Foreground}"
-                                                                                            Height="{Binding ElementName=PART_TextCommunityScore, Path=ActualHeight}"
+                                                                                            Foreground="{Binding ElementName=PART_TextCommunityScore2, Path=Foreground}"
+                                                                                            Height="{Binding ElementName=PART_TextCommunityScore2, Path=ActualHeight}"
                                                                                             ContentTemplate="{StaticResource FiveStarScoreTemplate}"/>
 
                                                                     </StackPanel>
@@ -316,16 +320,16 @@
 
                                                                     <Label Name="PART_ElemCriticScore" Content="{DynamicResource LOCCriticScore}" />
                                                                     <StackPanel Orientation="Horizontal"
-                                                                                    Visibility="{Binding ElementName=PART_TextCriticScore, Path=Visibility}">
-                                                                        <TextBlock Name="PART_TextCriticScore" VerticalAlignment="Center"
-                                                                                       Style="{DynamicResource TextBlockGameScore}" />
+                                                                                    Visibility="{Binding ElementName=PART_TextCriticScore2, Path=Visibility}">
+                                                                        <TextBlock Name="PART_TextCriticScore2" VerticalAlignment="Center" Text="{Binding Path=Game.CriticScore}"
+                                                                                       Style="{DynamicResource TextBlockGameScore}" Tag="{Binding Path=Game.CriticScoreGroup}" />
                                                                         <ContentControl Content="{Binding Game.CriticScore}"
                                                                                             Padding="6,0,0,4"
                                                                                             HorizontalAlignment="Left"
                                                                                             VerticalAlignment="Center"
                                                                                             Background="Transparent"
-                                                                                            Foreground="{Binding ElementName=PART_TextCriticScore, Path=Foreground}"
-                                                                                            Height="{Binding ElementName=PART_TextCriticScore, Path=ActualHeight}"
+                                                                                            Foreground="{Binding ElementName=PART_TextCriticScore2, Path=Foreground}"
+                                                                                            Height="{Binding ElementName=PART_TextCriticScore2, Path=ActualHeight}"
                                                                                             ContentTemplate="{StaticResource FiveStarScoreTemplate}"/>
                                                                     </StackPanel>
                                                                 </StackPanel>

@@ -282,9 +282,10 @@
     <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WindowPanelSeparatorColor}" />
     <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="{DynamicResource MainColorDark}" />
 
-    <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
-    <SolidColorBrush x:Key="NegativeRatingBrush" Color="#ff6b6b" />
-    <SolidColorBrush x:Key="MixedRatingBrush" Color="#fffca1" />
+    <SolidColorBrush x:Key="x90RatingBrush" Color="SkyBlue" />
+    <SolidColorBrush x:Key="x80RatingBrush" Color="SpringGreen" />
+    <SolidColorBrush x:Key="x70RatingBrush" Color="Yellow" />
+    <SolidColorBrush x:Key="x60RatingBrush" Color="Red" />
 
     <SolidColorBrush x:Key="WarningBrush" Color="#ff6b6b" />
 
